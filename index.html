@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maria Feminina Escalante-Kok</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 30px 25px;
+        background-color: aqua;
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/005/205/original/DSC_3106.JPG?1613760775);
+        background-size: cover;
+        background-position: bottom;
+      }
+
+      header {
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/005/207/original/FB_IMG_1590919449305.jpg?1613760868);
+        background-color: #000000;
+        background-size: cover;
+        background-position: center;
+        height: 250px;
+        padding: 150px 0 50px 50px;
+      }
+
+      h1,
+      h2 {
+        color: #ffffff;
+        background: transparent;
+        margin: auto 50px;
+        font-size: 35px;
+      }
+
+      nav {
+        min-width: 100px;
+        position: sticky;
+        top: 0;
+        padding: 5px;
+        background: #000000;
+        z-index: 1;
+      }
+
+      nav ul {
+        list-style-type: none;
+        text-align: center;
+      }
+
+      nav li {
+        display: inline;
+        margin: 0 auto;
+        padding: 10px;
+      }
+
+      a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: #0021ad;
+      }
+
+      table {
+        table-layout: fixed;
+        width: 100%;
+        font-size: 0.9em;
+        border-collapse: separate;
+        text-align: center;
+        min-width: 200px;
+        max-width: 600px;
+      }
+
+      thead tr {
+        height: 30px;
+        font-size: 14px;
+        background-color: rgba(44, 43, 43, 0.815);
+        border-collapse: inherit;
+      }
+
+      strong {
+        font-family: serif;
+        font-size: 18px;
+      }
+
+      ol strong {
+        font-family: sans-serif;
+        font-size: 15px;
+      }
+
+      span {
+        font-size: 18px;
+        font-weight: bolder;
+        font-style: italic;
+        color: red;
+      }
+
+      .personalize {
+        border-radius: 4px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #ffffff;
+        position: relative;
+        float: right;
+        padding: 8px 25px;
+        cursor: pointer;
+        box-shadow: 0 3.4px 4.5px -3px rgba(0, 0, 0, 0.043),
+          0 8.5px 11.5px -3px rgba(0, 0, 0, 0.062),
+          0 17.4px 23.4px -3px rgba(0, 0, 0, 0.078),
+          0 35.8px 48.2px -3px rgba(0, 0, 0, 0.097),
+          0 98px 132px -3px rgba(0, 0, 0, 0.14);
+      }
+
+      .personalize::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 5px;
+        background: #0021ad;
+        transform: scale(0, 1);
+      }
+
+      .personalize:hover::after {
+        transform: scale(1, 1);
+        transition: transform 400ms ease-in-out;
+      }
+
+      .general {
+        color: rgba(255, 255, 255, 0.966);
+        padding: 30px;
+        background: rgba(6, 6, 6, 0.8);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(12.5px);
+        -webkit-backdrop-filter: blur(12.5px);
+        border-radius: 10px;
+      }
+
+      .cv {
+        background: rgba(233, 233, 241, 0.7);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(7.5px);
+        -webkit-backdrop-filter: blur(7.5px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        padding: 30px;
+      }
+
+      .contact-information {
+        padding: 25px;
+        display: block;
+        margin: 0 auto;
+        max-width: 500px;
+        background: linear-gradient(transparent, rgba(2, 2, 247, 0.322));
+      }
+
+      footer {
+        height: 350px;
+        position: flex;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        background: rgba(9, 10, 249, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(5.5px);
+        -webkit-backdrop-filter: blur(5.5px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .linkedin {
+        width: 200px;
+        border: none;
+        filter: drop-shadow(0 5px 3px black);
+        padding: 0;
+        cursor: pointer;
+      }
+
+      .contact {
+        background: none;
+        border: none;
+        margin: 0 auto;
+      }
+
+      .credit {
+        font-weight: bold;
+        font-size: 18px;
+        font-family: inherit;
+        font-style: oblique;
+      }
+
+      .github-link {
+        color: #212529;
+        text-decoration: none;
+      }
+
+      .github-link:hover {
+        color: #212529;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top">
+      <button class="personalize">
+        Personalize this page
+        <br />
+        <img
+        src=https://static.xx.fbcdn.net/images/emoji.php/v9/t96/1/16/1f1ec_1f1e7.png
+        height="18"width="18"> <img
+        src=https://static.xx.fbcdn.net/images/emoji.php/v9/t5e/1/16/1f1f3_1f1f1.png
+        height="18"width="18"> <img
+        src=https://static.xx.fbcdn.net/images/emoji.php/v9/t34/1/16/1f1ea_1f1f8.png
+        height="18"width="18"> <img
+        src=https://static.xx.fbcdn.net/images/emoji.php/v9/t76/1/16/1f1ef_1f1f5.png
+        height="18"width="18">
+      </button>
+
+      <header>
+        <h1>Welcome!</h1>
+        <h2>
+          My name is Maria. <br />
+          How are you?
+        </h2>
+      </header>
+    </div>
+
+    <nav class="contents">
+      <ul>
+        <li><a href="#about-me">About.Me</a></li>
+        <li><a href="#languages">Languages.Spoken</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#jobs">Work.Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <br />
+    <main>
+      <div class="general">
+        <section id="about-me">
+          <h3>About Me</h3>
+          <p>Hi! As mentioned, you can call me Maria.</p>
+          <p>
+            I was born in the Philippines and have just recently moved to the
+            Netherlands. With my migration, I have been taking the time to learn
+            the language and also pick up new skills so that I can build a
+            career here.
+          </p>
+          <p>
+            I <span>loooove</span> animals and have a huge heart for them. Do
+            you know how some people have "green thumbs"? I probably have the
+            counterpart of that for animals. Growing up, any animal that I
+            raised really lived years with me! I've had pet dogs, cats, birds,
+            fishes, rabbits, ducks, and even chickens! Nope, I didn't live on a
+            farm but even ducklings and chicks grew up to be full-grown animals
+            in my care!
+          </p>
+          <p>
+            As for my other hobbies and interests, I enjoy traveling,
+            photography, food, and learning languages.
+            <br />
+            I'm glad these all fit together whenever I travel.
+          </p>
+          <p>
+            My favority travel destination? That's a no-brainer! Definitely
+            Japan! It has the complete package for me - beautiful scenery,
+            lovely weather, delicious food, and the kindest people! Traveling in
+            Japan is what inspired me to learn the language and interact with
+            the locals.
+          </p>
+          <p>
+            What do I do during my free time? I still enjoy learning languages.
+            My native language is English and all the other foreign languages
+            that I know, I learned purely through self-study. So now, even as I
+            "Netflix and chill", I like to take that as an opportunity to learn
+            languages by watching foreign language films. So far, Dutch seems to
+            be the hardest language for me to learn but I hope to reach native
+            fluency with it eventually.
+          </p>
+          <br />
+        </section>
+
+        <section id="languages">
+          <h3>What Languages do I Speak?</h3>
+          <table>
+            <thead>
+              <tr>
+                <th scope="row">LANGUAGES SPOKEN</th>
+                <th scope="column">FLUENCY</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>English</td>
+                <td>Native</td>
+              </tr>
+              <tr>
+                <td>Filipino</td>
+                <td>Fluent</td>
+              </tr>
+              <tr>
+                <td>Spanish</td>
+                <td>Fluent</td>
+              </tr>
+              <tr>
+                <td>Japanese</td>
+                <td>Conversational</td>
+              </tr>
+              <tr>
+                <td>Dutch</td>
+                <td>*Still in Progress*</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+      <br />
+
+      <div class="cv">
+        <section id="education">
+          <h3>Education</h3>
+          <ul>
+            <li>
+              <strong>Coding Workshop</strong><br />
+              She Codes<br />
+              <em>February 2021-June2021</em>
+            </li>
+            <li>
+              <strong>Bachelor's Degree in Nursing</strong><br />
+              Southville International School and Colleges<br />
+              <em>2006-2010</em>
+            </li>
+            <li>
+              <strong>Secondary Education</strong><br />
+              Montessori de Manila<br />
+              <em>2002-2006</em>
+            </li>
+          </ul>
+        </section>
+
+        <br />
+        <section id="jobs">
+          <h3>Work Experience</h3>
+          <ul>
+            <li>
+              <strong>Bilingual Fraud Quality Specialist</strong> <br />
+              Synchrony Financial Global Services Philippines, Inc.<br />
+              <em>June 2017 – Nov 2020</em>
+              <p>
+                Monitoring and evaluating calls, meet timelines to ensure
+                accuracy of tasks assigned, coordinate with aligned sites to
+                discuss calls for calibration, provide feedback to management
+                regarding results identified through monitoring process and
+                drive business initiatives, participated in activities within
+                various business sites to promote Rater visibility, established
+                and streamlined Consumer Banking Fraud evaluation process,
+                monitored and evaluated Consumer Banking Fraud alert cases
+              </p>
+            </li>
+            <li>
+              <strong>Bilingual Quality Specialist (Customer Service)</strong>
+              <br />
+              Synchrony Financial Global Services Philippines, Inc.<br />
+              <em>Sep 2015 – May 2017</em>
+              <p>
+                Monitoring and evaluating calls, meet timelines to ensure
+                accuracy of tasks assigned, coordinate with aligned sites to
+                discuss calls for calibration, provide feedback to management
+                regarding results identified through monitoring process and
+                drive business initiatives.
+              </p>
+            </li>
+            <li>
+              <strong>Bilingual Fraud Specialist</strong> <br />
+              Synchrony Financial Global Services Philippines, Inc.<br />
+              <em>Jan 2013 – Aug 2015</em>
+              <p>
+                Handle calls concerning referred applications, processing
+                lost/stolen reports and verifying suspicious transactions with
+                customers
+                <br />
+              </p>
+              Tranings/Projects:
+              <ol>
+                <li>
+                  <strong>Bilingual CCT Project (February-March 2014) </strong
+                  ><br />
+                  - worked together with the Bilingual manager in assisting the
+                  bilingual representatives with decreasing their Customer Care
+                  Time (CCT), better known as the "call handling time", through
+                  huddles and side-by-side sessions.
+                </li>
+                <li>
+                  <strong>Bridge Specialist (April 2014)</strong> <br />
+                  - handled the newly graduated batch of Fraud representatives
+                  during their Bridge period by doing floorwalk, conducting
+                  huddles for process training, and providing coaching feedback
+                  on CCT improvement.
+                </li>
+                <li>
+                  <strong
+                    >Management Trainee - Fraud Rotation Program (May 2014 -
+                    December 2014)</strong
+                  ><br />
+                  - while still needing to perform my duties as a bilingual
+                  fraud representative, 50% of my time had been allocated to
+                  performing MOD duties. Responsibilities include: call
+                  monitoring, coaching, review of accounts for blocking, assist
+                  in handling escalated client and customer complaints, conduct
+                  training on process and procedural updates, attend meetings
+                  (such as weekly stakeholders' meetings, daily strategy
+                  meetings, call listening sessions with leaders from other
+                  sites), and other tasks as deemed necessary.
+                </li>
+              </ol>
+            </li>
+            <li>
+              <strong>Bilingual Customer Service Representative</strong><br />
+              Synchrony Financial Global Services Philippines, Inc. <br />
+              <em>Oct 2011 – May 2012</em>
+              <p>
+                Handle customer service concerns, assist customers with
+                billing/other account-related inquiries
+              </p>
+            </li>
+
+            <li>
+              <strong>Customer Service Representative</strong> <br />
+              Synchrony Financial Global Services Philippines, Inc.<br />
+              <em>Apr 2011 – Oct 2011</em>
+              <p>
+                Handle customer service concerns, assist customers with
+                billing/other account-related inquiries
+              </p>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <br />
+    <footer>
+      <div class="contact-information">
+        <section id="contact">
+          <strong>Want to know more?</strong>
+          <br />
+          <br />
+          I can be found on LinkedIn.
+          <br />
+          <a
+            href="https://www.linkedin.com/in/maria-feminina-escalante-kok-67437b91"
+            target="_blank"
+          >
+            <button class="contact">
+              <img
+                src="https://www.learnearnretire.com/hs-fs/hubfs/linkedin.png?width=1024&name=linkedin.png"
+                class="linkedin"
+              />
+            </button>
+          </a>
+        </section>
+        <a href="#top">Top</a>
+      </div>
+
+      <br />
+      <section class="credit">
+        Coded by Maria Feminina Escalante
+        <br />
+        February 2021
+      </section>
+      <br />
+      <a
+        href="https://github.com/mariafeminina06/MyCV"
+        target="_blank"
+        class="github-link"
+      >
+        View Source Code</a
+      >
+    </footer>
+
+    <script>
+      function personalize() {
+        let language = prompt("What language do you speak?");
+        language = language.toLowerCase();
+        language = language.trim();
+        language = language.replace("nederlands", "dutch");
+        language = language.replace("espanol", "spanish");
+        language = language.replace("español", "spanish");
+        language = language.replace("nihongo", "japanese");
+        language = language.replace("nihonggo", "japanese");
+        language = language.replace("日本語", "japanese");
+        let h1 = document.querySelector("h1");
+        let h2 = document.querySelector("h2");
+
+        if (language === "dutch") {
+          let name = prompt("Hoe heet u?");
+          alert("Dankuwel! Een momentje, alstublieft...");
+
+          h1.innerHTML = "Hoi " + name + "!";
+          h2.innerHTML = "Ik heet Maria. <br /> Hoe gaat het?";
+        } else {
+          if (language === "spanish") {
+            let name = prompt("¿Cómo se llama Ud?");
+            alert("¡Muchísimas gracias! Un momento, por favor...");
+
+            h1.innerHTML = "¡Hola, " + name + "!";
+            h2.innerHTML = "Me llamo Maria. <br /> ¿¿Qué tal??";
+          } else {
+            if (language === "japanese") {
+              let name = prompt("お名前は何ですか。");
+              alert("ありがとうございます。ちょっと待って下さい");
+
+              h1.innerHTML = "はじめまして " + name + "さん。";
+              h2.innerHTML =
+                "私はマリアです。<br /> よろしくおねがいします。 <br /> お元気ですか。";
+            } else {
+              let name = prompt("what's your name?");
+              h1.innerHTML = "Hi, " + name + "! Welcome!";
+            }
+          }
+        }
+      }
+
+      let personalizeButton = document.querySelector(".personalize");
+      personalizeButton.addEventListener("click", personalize);
+    </script>
+  </body>
+</html>
